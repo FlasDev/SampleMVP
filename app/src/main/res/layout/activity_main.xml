@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="ProfileActivity"
+            type="com.oleg.mvpprofile.ui.ProfileActivity"/>
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:id="@+id/image_photo"
+        android:layout_weight="1"
+        android:src="@drawable/ic_launcher_background"
+        android:background="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textlayout1"
+            android:layout_toRightOf="@id/image_photo">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Имя" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textlayout2"
+            android:layout_toRightOf="@id/image_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textlayout1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Фамилия" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_photo"
+        android:layout_alignStart="@+id/image_photo"
+        android:layout_below="@+id/image_photo"
+        android:id="@+id/textlayout3">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/email"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/image_photo"
+            android:layout_alignStart="@+id/image_photo"
+            android:layout_below="@+id/image_photo"
+            android:hint="Email" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textlayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/image_photo"
+        android:layout_alignStart="@+id/image_photo"
+        android:layout_below="@+id/textlayout3">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/phone_number"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="38(___)___ __ __" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_birthday"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="10.09.1998"
+        android:layout_below="@+id/textlayout4"
+        android:background="@drawable/birthday_button"
+        android:drawableLeft="@drawable/ic_perm_contact_calendar_black_24dp"
+        android:gravity="center_vertical" />
+
+    <ImageButton
+        android:id="@+id/add_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_birthday"
+        android:layout_alignStart="@+id/button_birthday"
+        android:layout_below="@+id/button_birthday"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="17dp"
+        android:background="@null"
+        android:padding="20dp"
+        android:src="@drawable/ic_add_a_photo_black_24dp" />
+
+
+</RelativeLayout>
+</layout>
